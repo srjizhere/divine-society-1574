@@ -1,0 +1,15 @@
+{
+      "product":[],
+      "Users":[
+        {
+          "name": "Bipin Singh",
+          "email": "bipin@gmail.com",
+          "address": "wffb",
+          "password":123,
+          "userCart":[
+
+          ],
+          "wishlist": []
+        }
+      ]
+}
