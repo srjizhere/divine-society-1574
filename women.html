@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #cont {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+    }
+
+    #cont img {
+      width: 90%;
+      height: 400px;
+      margin: auto;
+      align-items: center;
+      margin-left: 5%;
+    }
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .numbertext {
+      color: black;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      right: 0;
+    }
+    #brand_Container {
+      width: 100%;
+      height: 347px;
+      border: 1px solid red;
+    }
+
+    body {
+      background: #032527;
+    }
+
+    .header h1 {
+      color: white;
+      text-align: center;
+    }
+    #slider {
+      width: 720px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 20px;
+      margin: 20px auto;
+    }
+    /*the sildeer div has a defined width and height which acts as a screen inside another screen*/
+
+    #slider .slides {
+      display: block;
+      width: 6000px;
+      height: 400px;
+      margin: 0;
+      padding: 0;
+    }
+    /*the list inside has a greater width and height to cover all the slideX with a display block type*/
+
+    #slider .slide {
+      float: left;
+      list-style-type: none;
+      width: 720px;
+      height: 400px;
+      text-align: center;
+      font-size: 30px;
+      color: lightblue;
+    }
+
+    #slider .slide p {
+      position: relative;
+      top: 170px;
+    }
+
+    /*Each slid has the same width as that of the slider hence covering the whole span*/
+
+    .slide1 {
+      background: #9e6ce4;
+    }
+
+    .slide2 {
+      background: #6c56aa;
+    }
+
+    .slide3 {
+      background: #483490;
+    }
+
+    .slide4 {
+      background: #082766;
+    }
+
+    .slide5 {
+      background: #0d4950;
+    }
+  </style>
+  <body>
+    <div id="cont"></div>
+
+    <button onclick="pre(-1)" class="prev">❮</button>
+    <button onclick="next(1)" id="pre" class="next">❯</button>
+    <button id="stop">Stop</button>
+
+    <div id="brand_Container">
+      <div class="container">
+        <div class="header">
+          <h1 class="text-muted">A Basic Slider</h1>
+        </div>
+
+        <div id="slider">
+          <ul class="slides">
+            <li class="slide slide1"><p>slide1</p></li>
+            <li class="slide slide2"><p>slide2</p></li>
+            <li class="slide slide3"><p>slide3</p></li>
+            <li class="slide slide4"><p>slide4</p></li>
+            <li class="slide slide5"><p>slide5</p></li>
+            <li class="slide slide1"><p>slide1</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="./src/scripts/women.js"></script>
