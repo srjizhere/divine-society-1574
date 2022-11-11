@@ -189,6 +189,7 @@ function bitWar() {
         let brand = document.createElement("div")
         brand.setAttribute("class", "barndtag")
         let h2 = document.createElement("h2");
+        h2.id = "marginH2"
 
         h2.innerText = brandtag[0];
 
@@ -272,14 +273,18 @@ let brandSec = () => {
     brandRender(page)
 
     let nextt = document.createElement("button")
-    nextt.innerText = ">"
-
-
+    let nexttarrow = document.createElement("img")
+    nexttarrow.src = "https://cdn-icons-png.flaticon.com/128/271/271228.png"
+    nextt.append(nexttarrow)
+    nextt.setAttribute("class", "sameNextt")
 
     let prev = document.createElement("button")
-    prev.innerText = "<"
+    let arrowimage = document.createElement("img")
+    arrowimage.src = "https://cdn-icons-png.flaticon.com/128/271/271220.png"
+    prev.append(arrowimage)
     nextt.id = "brand_next"
     prev.id = "brand_prev"
+    prev.setAttribute("class", "sameNextt")
 
     prev.onclick = () => {
         if (page === 0) {
@@ -333,7 +338,7 @@ let off = () => {
 
             let but = document.createElement("button")
             but.innerText = "SHOP NOW"
-
+            but.setAttribute("class", "but")
             mainDiv.append(img, h3, p, but)
 
             jd.append(mainDiv)
@@ -344,13 +349,17 @@ let off = () => {
 
     offers(start)
     let nextt = document.createElement("button")
-    nextt.innerText = ">"
+    nexttimg = document.createElement("img")
+    nexttimg.src = "https://cdn-icons-png.flaticon.com/128/271/271228.png"
+    nextt.append(nexttimg)
     nextt.setAttribute("class", "forward")
 
 
 
     let prev = document.createElement("button")
-    prev.innerText = "<"
+    previmg = document.createElement("img")
+    previmg.src = "https://cdn-icons-png.flaticon.com/128/271/271220.png"
+    prev.append(previmg)
 
     prev.onclick = () => {
         if (start === 0) {
@@ -378,9 +387,9 @@ let off = () => {
 
     }
 
-    document.getElementById("Sbtn").append(prev, nextt)
+    document.querySelector("#prev_button").append(nextt)
 
-
+    document.getElementById("nxt_button").append(prev)
 
 
 }
