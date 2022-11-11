@@ -1,6 +1,12 @@
 
 import navbar from "../components/navbar.js";
 
+import { srj_footer } from "../components/footer.js";
+let srjfooter=document.getElementById("footer")
+
+
+
+
 
 let nav = document.getElementById('navbar').innerHTML = navbar();
 
@@ -44,3 +50,10 @@ function closeModal(modal) {
 }
 
 //popup js end
+
+
+
+
+
+//footer
+srjfooter.innerHTML = srj_footer()
