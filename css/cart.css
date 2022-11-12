@@ -167,3 +167,20 @@
     scale: 1.05;
     transition: 0.2s ease-in;
 }
+
+#totalcost{
+    justify-content: right;
+    border: 1px solid red;
+    display: flex;
+}
+#totalcost>button{
+    padding: 0.8%;
+    margin-right: 40px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    font-size: larger;
+    font-weight: bolder;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    border: none;
+    
+}
