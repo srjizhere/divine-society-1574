@@ -42,8 +42,9 @@ function rendercartimgsrj(dataa){
        let datacontainersrj= document.createElement("div");
        datacontainersrj.id="displaygridsrj";
       containerbody.append(datacontainersrj);
-
+            let totalcost = 0;
       dataa.forEach(e => {
+        totalcost += e.price
           let brand = document.createElement("h3");
           let container = document.createElement("div");
           container.className = "pouchsrj"
@@ -71,28 +72,14 @@ function rendercartimgsrj(dataa){
 
 
 
-            container.append(brand,imgsrjcont,title,price,btn,rbtn)
+            container.append(brand,imgsrjcont,title,price,rbtn)
             datacontainersrj.append(container)
             
         });
-        
+        document.querySelector("#totalcost>button").innerText = `TOTAL CART VALUE ${totalcost} $`
     };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
+function srj_goto_checkout(){
+    window.location.href = "./checkout/checkout.html"
+}
