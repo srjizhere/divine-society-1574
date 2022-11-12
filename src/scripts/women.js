@@ -1,6 +1,15 @@
 /* Slide show*/
 
+import navbar from "/src/components/navbar.js"
 
+import { srj_footer } from "/src/components/footer.js"
+
+document.getElementById("navbar").innerHTML = navbar()
+
+document.getElementById("footer").innerHTML = srj_footer()
+
+
+console.log(navbar)
 let arr = [
     "https://modesens.com/banner/13927/getimg/?img=%2Fbanner%2F20221107-modesens-Double11-1140x400-EN_1667706245.jpg",
     "https://modesens.com/banner/14015/getimg/?img=%2Fbanner%2F20221109-modesens-Browns-1140x400-EN.jpg",
@@ -72,10 +81,10 @@ let offersArray = [
 
 let brandtag = ["Featured Partners", "New Partners and Designers"]
 
-tagline = ["Get the look you want. Choose from over 12,000+ brands and designers.", "Check out the new retail partners and brands who just joined the ModeSens family.", "Check out the new retail partners and brands who just joined the ModeSens family."]
+let tagline = ["Get the look you want. Choose from over 12,000+ brands and designers.", "Check out the new retail partners and brands who just joined the ModeSens family.", "Check out the new retail partners and brands who just joined the ModeSens family."]
 
 
-time = true
+let time = true
 let div = document.getElementById("cont");
 let img = document.createElement("img");
 let p = document.createElement("p")
@@ -111,7 +120,7 @@ let show = (i) => {
 
 
 
-let myinterval = setInterval(slideShow, 3000)
+let myinterval = setInterval(slideShow, 15000)
 
 
 
@@ -143,6 +152,9 @@ button.onclick = () => {
 }
 
 let u = 1
+document.getElementById("pre").addEventListener("click", function () {
+    next(1)
+})
 let next = () => {
 
     u++
@@ -156,6 +168,11 @@ if (u == 0) {
     document.getElementById("pre").disabled = false
     show(u)
 }
+
+document.querySelector(".prev").addEventListener("click", function () {
+    pre(-1)
+})
+
 let pre = () => {
     u--
 
@@ -244,8 +261,8 @@ bitWar()
 let brandSec = () => {
     let cont = document.getElementById("brand_Container")
     let main = document.createElement("div")
-    btnBox1 = document.createElement("div")
-    btnBox2 = document.createElement("div")
+    let btnBox1 = document.createElement("div")
+    let btnBox2 = document.createElement("div")
     let page = 0
     let main1 = document.createElement("div")
     main1.setAttribute("class", "brandLogo")
@@ -328,6 +345,7 @@ let off = () => {
             mainDiv.setAttribute("class", "banner")
 
             let img = document.createElement("img")
+            img.setAttribute("class", "xxx")
             img.src = offersArray[i].img
 
             let h3 = document.createElement("h3")
@@ -349,7 +367,7 @@ let off = () => {
 
     offers(start)
     let nextt = document.createElement("button")
-    nexttimg = document.createElement("img")
+    let nexttimg = document.createElement("img")
     nexttimg.src = "https://cdn-icons-png.flaticon.com/128/271/271228.png"
     nextt.append(nexttimg)
     nextt.setAttribute("class", "forward")
@@ -357,7 +375,7 @@ let off = () => {
 
 
     let prev = document.createElement("button")
-    previmg = document.createElement("img")
+    let previmg = document.createElement("img")
     previmg.src = "https://cdn-icons-png.flaticon.com/128/271/271220.png"
     prev.append(previmg)
 
@@ -430,7 +448,7 @@ let recentAppender = () => {
 
 
     let cont = document.getElementById("recent_append")
-    renderDom = (arr, start) => {
+    let renderDom = (arr, start) => {
         cont.innerHTML = null
         for (let i = start; i < start + 4; i++) {
             let div = document.createElement("div")

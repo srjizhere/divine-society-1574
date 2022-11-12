@@ -16,7 +16,7 @@ document.getElementById("footer").innerHTML = srj_footer()
 let api = "https://modesens-data3.onrender.com/api/product"
 let getData = async (page, limit) => {
 
-    let res = await fetch(`${api}?category=womens&_page=${page}`)
+    let res = await fetch(`${api}?category=mens&_page=${page}`)
     res = await res.json()
 
     renderDom(res)
@@ -121,7 +121,7 @@ let ss = async () => {
     value = value.split(" ")
     let cat = value[0]
     let order = value[1]
-    let res = await fetch(`${api}?category=womens&_sort=${cat}&_order=${order}&_page=${page}&_limit=20`)
+    let res = await fetch(`${api}?category=mens&_sort=${cat}&_order=${order}&_page=${page}&_limit=20`)
     res = await res.json()
     console.log(res);
     renderDom(res)

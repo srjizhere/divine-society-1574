@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+
     <title>Document</title>
   </head>
   <style>
@@ -38,10 +41,10 @@
       display: flex;
     }
     #navFilterSection {
-      width: 400;
+      width: 261px;
     }
     #paginationsection {
-      width: 800px;
+      width: 500px;
       height: 50ox;
       border: 0px solid black;
       margin-left: 100px;
@@ -51,7 +54,7 @@
       width: auto;
     }
     #split {
-      margin-top: 5px;
+      margin-top: 0px;
       width: 150px;
       margin-left: 20px;
     }
@@ -64,7 +67,7 @@
       display: flex;
     }
     #FilterSection {
-      width: 300px;
+      width: 241px;
       border: 0px solid blue;
       height: auto;
       margin-left: 30px;
@@ -103,13 +106,13 @@
       font-size: large;
     }
     #reset {
-      width: 280px;
+      width: 207px;
       display: flex;
       cursor: pointer;
       justify-content: space-between;
       margin-left: 10px;
       font-weight: 200;
-      font-size: large;
+      font-size: 16px;
     }
     .sss {
       font-size: larger;
@@ -118,7 +121,7 @@
       border: none;
     }
     #SAVE {
-      width: 100%;
+      width: 83%;
       height: 37px;
       font-size: larger;
     }
@@ -137,11 +140,39 @@
       border: none;
     }
     .product_img {
-      width: 202px;
-      height: 291px;
+      width: 189px;
+      height: 274px;
+    }
+    #button {
+      margin: auto;
+    }
+    .b {
+      width: 25px;
+      font-size: large;
+    }
+    #btn1 {
+      width: auto;
+      margin-left: 75%;
+      height: auto;
+    }
+    #btn1:hover {
+      text-decoration: underline;
+      color: red;
+    }
+    .b:hover {
+      text-decoration: underline;
+      color: red;
+    }
+    #mod {
+      font-size: small;
+      margin-left: 40px;
+    }
+    #search_section p {
+      font-size: 15px;
     }
   </style>
   <body>
+    <div id="navbar"></div>
     <div id="UpperLine">
       <div id="blank"></div>
       <div id="Line">
@@ -158,7 +189,7 @@
       </div>
     </div>
     <div id="nav">
-      <div id="navFilterSection"><p>MODESENS / SHOP / WOMEN</p></div>
+      <div id="navFilterSection"><p id="mod">MODESENS / SHOP / WOMEN</p></div>
       <div id="navPageSection">
         <div id="paginationsection">
           <div id="button"></div>
@@ -198,7 +229,7 @@
           <p>10,000+ITEMS</p>
           <div>
             <img
-              style="height: 40px; width: 50px"
+              style="height: 26px; width: 44px; margin-right: 72px"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWXI_JyOVRGL5fOKjn9qMUF3pWkgFcfDm1oQ&usqp=CAU"
               alt=""
             />
@@ -262,6 +293,7 @@
       </div>
       <div id="Product_section"></div>
     </div>
+    <footer id="footer"></footer>
   </body>
 </html>
-<script src="womenAll.js"></script>
+<script type="module" src="womenAll.js"></script>

@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      src="https://kit.fontawesome.com/a634ccc9aa.js"
+      crossorigin="anonymous"
+    ></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
   <link
     href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
     rel="stylesheet"
@@ -33,11 +39,11 @@
     .next {
       cursor: pointer;
       position: absolute;
-      top: 35%;
+      top: 50%;
       width: auto;
       padding: 16px;
       margin-top: -22px;
-      color: white;
+
       font-weight: bold;
       font-size: 18px;
       transition: 0.6s ease;
@@ -119,12 +125,12 @@
       text-align: center;
     }
     #jd {
-      width: 99%;
+      width: 900px;
       margin: auto;
-      margin-left: 50px;
+      justify-content: space-between;
     }
     .banner {
-      width: 390px;
+      width: 250px;
       height: auto;
     }
     #ViewMore {
@@ -170,7 +176,6 @@
       cursor: pointer;
     }
     .arrow {
-      background-color: blue;
       width: 50px;
       height: 50px;
       margin-right: 150px;
@@ -178,7 +183,6 @@
       left: 0;
     }
     .arrow2 {
-      background-color: blue;
       width: 50px;
       height: 50px;
       right: 0;
@@ -212,7 +216,7 @@
       grid-template-columns: repeat(3, 1fr);
     }
     #recent_append {
-      width: 1140px;
+      width: 900px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
     }
@@ -229,22 +233,23 @@
     #marginH2 {
       margin-top: 50px;
     }
+    .xxx {
+      width: 250px;
+    }
+    .fa-solid {
+      font-size: 32px;
+      line-height: 80px;
+    }
   </style>
   <body>
+    <div id="navbar"></div>
     <div id="cont"></div>
 
-    <button onclick="pre(-1)" class="prev">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Vr6njBWuBPNOCkRLluJIxwa3twd-CutJYw&usqp=CAU"
-        alt=""
-      />
+    <button class="prev">
+      <i class="fa-solid fa-chevron-left"></i>
     </button>
-    <button onclick="next(1)" id="pre" class="next">
-      <img
-        class="reduce"
-        src="data:image/png;base64,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"
-        alt=""
-      />
+    <button id="pre" class="next">
+      <i class="fa-solid fa-chevron-right"></i>
     </button>
     <button id="stop">Stop</button>
 
@@ -266,7 +271,9 @@
     <div id="trending">
       <h2>Trending Now</h2>
       <div id="trendingBody">
-        <div class="arrow"></div>
+        <div class="arrow">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
         <div class="trending_items">
           <img
             class="lld"
@@ -320,21 +327,32 @@
           </div>
           <p>Compere 12 stores</p>
         </div>
-        <div class="arrow2"></div>
+        <div class="arrow2">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
       </div>
     </div>
     <div id="recent">
       <div><h2>Recently Viewed</h2></div>
       <div id="recent_Search">
-        <div class="recentBtn" id="recentBtnPre"><button>prev</button></div>
+        <div class="recentBtn" id="recentBtnPre">
+          <i style="margin-top: 150px" class="fa-solid fa-chevron-left"></i>
+        </div>
         <div id="recent_append"></div>
-        <div class="recentBtn" id="recentBtnNxt"><button>next</button></div>
+        <div class="recentBtn" id="recentBtnNxt">
+          <i
+            style="margin-left: 110px; margin-top: 150px"
+            class="fa-solid fa-chevron-right"
+          ></i>
+        </div>
       </div>
       <div><button>More View</button></div>
     </div>
 
     <div id="community"></div>
+
+    <footer id="footer"></footer>
   </body>
 </html>
 
-<script src="./src/scripts/women.js"></script>
+<script type="module" src="./src/scripts/women.js"></script>
