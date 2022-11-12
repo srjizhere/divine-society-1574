@@ -3,31 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="./css/navbar.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <title>Modesens Admin</title>
+    <link rel="stylesheet" href="./style/admin.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 <body>
-    <div id="navbar"></div>
-
-    <form action="" id="addProduct">
-        <input type="text" placeholder="title" id="title">
-        <input type="text" placeholder="Image link" id="image">
-        <input type="number" placeholder="Price" id="price">
-        <input type="text" placeholder="Description" id="description">
-        <input type="text" placeholder="Discount" id="discount">
-        <input type="text" placeholder="Brand" id="brand">
-        
-
-        <select id="category">
-            <option value="mens">Men</option>
-            <option value="womens">Women</option>
-            <option value="kids">Kids</option>
-            <option value="beauty">Beauty</option>
-        </select>
-        <input type="submit" value="AddProduct">
-    </form>
+    <input type="checkbox" name="" id="nav-toggle">
+    <div class="am_sidebar">
+        <div class="am_sidebar_logo">
+            <a href="./admin.html">
+                <img src="https://cdn.modesens.com/static/img/20190228newlogo-black.svg" height="250px" width="250px" alt="">
+            </a>
+        </div>
+        <div class="am_sidebar_menu">
+            <ul>
+                <li>
+                    <a href="./admin.html" class="active">
+                        <span class="las la-igloo"></span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./packages.html">
+                        <span class="las la-clipboard-list"></span>
+                        <span>Add Product</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./customers.html"><span class="las la-user"></span>
+                        <span>Manage Database</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="am_main-content">
+        <header id="navbar">
+           <h2 style="margin-top: 30px;">
+                <label for="nav-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                <span id="namechange">Dashboard</span>
+            </h2>
+        <div class="am_search-warpper">
+            <span class="las la-search"></span>
+            <input type="search" placeholder="Search"/>
+        </div>
+            <a href="./admin.html">
+                <img src="https://cdn.modesens.com/static/img/20190228newlogo-black.svg" alt="" style="height: 30px";>
+            </a>
+            <div class="am_user-wrapper">
+                <img src="https://avatars.githubusercontent.com/u/110052834?s=400&u=1d739f6756555d999b850254f617a1af7e9bd5e0&v=4" width="50px" height="50px" alt="">
+                <div>
+                    <h4>Bipin Singh</h4>
+                    <small>Super Admin</small>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="am_cards">
+                <div class="card_single">
+                    <div>
+                        <h1 style="color: white;">79</h1>
+                        <span>Add Product</span>
+                    </div>
+                    <div>
+                        <span class="las la-clipboard-list"></span>
+                    </div>
+                </div>
+                <div class="card_single">    
+                    <div>
+                        <h1 style="color: white;">54</h1>
+                        <span>Customers</span>
+                    </div>
+                    <div>
+                        <span class="las la-users"></span>
+                    </div>
+                </div>
+                <div class="card_single">
+                    <div>
+                        <h1 style="color: white;">124</h1>
+                        <span>Gift Card</span>
+                    </div>
+                    <div>
+                        <span class="las la-gift"></span>
+                    </div>
+                </div>
+                <div style="background: black !important;" class="card_single">
+                    <div>
+                        <h1>₹150k</h1>
+                        <span>Income</span>
+                    </div>
+                    <div>
+                        <span class="lab la-google-wallet"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="packages_grid">
+                <div class="packages">
+                    <div class="card">
+                        <div class="card_header">
+                            <h3>Recent Products</h3>
+                            <button>See all <span class="las la-arrow-right"></span></button>
+                        </div>
+                        <div class="card_body">
+                            <div class="table-responsive">
+                                <table width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td>Title</td>
+                                            <td>Price</td>
+                                            <td>Brand</td>
+                                            <td>Image</td>
+                                            <td>Discount</td>
+                                            <td>Category</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="container">
+                                        <!-- Fetch data from sever and append all package information here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="customers">
+                    <div class="card">
+                        <div class="card_header">
+                            <h3>New Customer</h3>
+                            <button>See all<span class="las la-arrow-right"></span></button>
+                        </div>
+                        <div class="card_body">
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="https://www.pngitem.com/pimgs/m/62-625606_computer-icons-suit-image-avatar-clip-art-customer.png" alt="" height="40px" width="40px">
+                                    <div>
+                                        <h4>Chunnu</h4>
+                                        <small>Varanasi</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="https://www.pngitem.com/pimgs/m/62-625606_computer-icons-suit-image-avatar-clip-art-customer.png" alt="" height="40px" width="40px">
+                                    <div>
+                                        <h4>Chunnu</h4>
+                                        <small>Varanasi</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="https://www.pngitem.com/pimgs/m/62-625606_computer-icons-suit-image-avatar-clip-art-customer.png" alt="" height="40px" width="40px">
+                                    <div>
+                                        <h4>Chunnu</h4>
+                                        <small>Varanasi</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
+<script src="./script/admin.js"></script>
 </html>
-
-<script  src="admin.js"></script>
