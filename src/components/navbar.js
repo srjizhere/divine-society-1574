@@ -1,17 +1,18 @@
 
 
 let navbar = () => {
-    return `
+  return `
     <header>
       <!-- logo section  -->
       <div class="hcontainer">
         <div class="header-left">
           <div class="logo">
-            <img
-              src="https://cdn.modesens.com/static/img/20190228newlogo-black.svg"
-              alt=""
-              width="180px"
-            />
+          <a href="women.html"> <img
+          src="https://cdn.modesens.com/static/img/20190228newlogo-black.svg"
+          alt=""
+          width="180px"
+        /></a>
+           
           </div>
         </div>
 
@@ -19,12 +20,12 @@ let navbar = () => {
         <div class="header-mid">
           <ul class="main-menu">
             <li>
-              <a href="#" class="active">WOMEN</a>
+              <a href="women.html" class="active">WOMEN</a>
               <div class="megamenu">
-                <div><a href="">SHOP ALL</a></div>
+                <div><a href="iwomenAll.html">SHOP ALL</a></div>
 
                 <div>
-                  <a href="">CLOTHING</a>
+                  <a href="iwomenAll.html">CLOTHING</a>
                   <div class="submenu">
                     <div>
                       <div><h5>SHOP BY CATEGORY</h5></div>
@@ -180,11 +181,11 @@ let navbar = () => {
                 </div>
 
                 <div>
-                  <a href="">BEAUTY</a>
+                  <a href="beauty.html">BEAUTY</a>
                   <div class="submenu">
                     <div>
                       <div><h5>SHOP BY CATEGORY</h5></div>
-                      <div><a href="">NEW ARRIVALS</a></div>
+                      <div><a href="beauty.html">NEW ARRIVALS</a></div>
                       <div><a href="">SHOP ALL</a></div>
                       <div><a href="">BATH</a></div>
                       <div><a href="">BED</a></div>
@@ -298,9 +299,9 @@ let navbar = () => {
               </div>
             </li>
             <li>
-              <a href="#" class="active">MEN</a>
+              <a href="men.html" class="active">MEN</a>
               <div class="megamenu">
-                <div><a href="">SHOP ALL</a></div>
+                <div><a href="mensAll.html">SHOP ALL</a></div>
 
                 <div>
                   <a href="">CLOTHING</a>
@@ -577,10 +578,10 @@ let navbar = () => {
               </div>
             </li>
             <li class="menu-item">
-              <a href="#" class="active">BEAUTY</a>
+              <a href="beauty.html" class="active">BEAUTY</a>
               <div class="megamenu">
                 <div><a href="">SHOP ALL</a></div>
-                <div><a href="">WOMEN'S BEAUTY</a></div>
+                <div><a href=""beauty.html">WOMEN'S BEAUTY</a></div>
                 <div><a href="">MEN'S GROOMING</a></div>
                 <div><a href="">KIDS CARE</a></div>
                 <div><a href="">SALE</a></div>
@@ -598,7 +599,7 @@ let navbar = () => {
               </div>
             </li>
             <li class="menu-item">
-              <a href="#" class="active">HOME</a>
+              <a href="index.html" class="active">HOME</a>
               <div class="megamenu">
                 <div class="mini-megamenu">
                   <div><h5>SHOP BY CATEGORY</h5></div>
@@ -645,7 +646,7 @@ let navbar = () => {
                 <div><a href="">COUPONS</a></div>
                 <div><a href="">WOMENS'S SALE</a></div>
                 <div><a href="">MEN'S SALE</a></div>
-                <div><a href="">BEAUTY'S SALE</a></div>
+                <div><a href=""beauty.html">BEAUTY'S SALE</a></div>
                 <div><a href="">KID'S SALE</a></div>
                 <div><a href="">HOME'S SALE</a></div>
               </div>
@@ -672,7 +673,7 @@ let navbar = () => {
             />
           </li>
           <li class="menu-item">
-            <img
+            <img id="gotoCart"
               src="https://cdn-icons-png.flaticon.com/128/6205/6205825.png"
               alt=""
             />

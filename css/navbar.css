@@ -16,6 +16,7 @@ header{
 
 .hcontainer{
     max-width: 1300px;
+    
     margin: auto;
     display: flex;
     padding: 20px 10px;
@@ -84,6 +85,7 @@ ul{
     padding: 20px;
     font-size: 90%;
     background-color: rgb(247, 247, 247);
+    z-index: 10;
 }
 .megamenu>div>a{
     color: black;
@@ -126,6 +128,7 @@ div>ul>li:hover .megamenu{
     padding: 20px;
     font-size: 90%;
     background-color: rgb(247, 247, 247);
+    z-index: 100;
 }
 
 .megamenu>div:hover .submenu{

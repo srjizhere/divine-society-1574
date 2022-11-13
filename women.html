@@ -1,153 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      src="https://kit.fontawesome.com/a634ccc9aa.js"
+      crossorigin="anonymous"
+    ></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mega Menu</title>
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="css/common.css" />
   </head>
   <style>
-    #cont {
-      width: 100%;
-      height: 100%;
-      margin: auto;
+    #brand_prev img {
+      width: 25px;
+      height: 25px;
+      top: 800px;
     }
 
-    #cont img {
-      width: 90%;
-      height: 400px;
-      margin: auto;
-      align-items: center;
-      margin-left: 5%;
-    }
-    .prev,
-    .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
+    #brand_next img {
+      width: 25px;
+      height: 25px;
+      top: 800px;
     }
 
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .numbertext {
-      color: black;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      right: 0;
-    }
-    #brand_Container {
-      width: 100%;
-      height: 347px;
-      border: 1px solid red;
-    }
-
-    body {
-      background: #032527;
-    }
-
-    .header h1 {
-      color: white;
-      text-align: center;
-    }
-    #slider {
-      width: 720px;
-      height: 400px;
-      overflow: hidden;
-      border-radius: 20px;
-      margin: 20px auto;
-    }
-    /*the sildeer div has a defined width and height which acts as a screen inside another screen*/
-
-    #slider .slides {
-      display: block;
-      width: 6000px;
-      height: 400px;
-      margin: 0;
-      padding: 0;
-    }
-    /*the list inside has a greater width and height to cover all the slideX with a display block type*/
-
-    #slider .slide {
-      float: left;
-      list-style-type: none;
-      width: 720px;
-      height: 400px;
-      text-align: center;
-      font-size: 30px;
-      color: lightblue;
-    }
-
-    #slider .slide p {
-      position: relative;
-      top: 170px;
-    }
-
-    /*Each slid has the same width as that of the slider hence covering the whole span*/
-
-    .slide1 {
-      background: #9e6ce4;
-    }
-
-    .slide2 {
-      background: #6c56aa;
-    }
-
-    .slide3 {
-      background: #483490;
-    }
-
-    .slide4 {
-      background: #082766;
-    }
-
-    .slide5 {
-      background: #0d4950;
+    button img {
+      width: 25px;
+      height: 25px;
     }
   </style>
   <body>
+    <nav id="navbar"></nav>
+
+    <div id="container"></div>
     <div id="cont"></div>
 
-    <button onclick="pre(-1)" class="prev">❮</button>
-    <button onclick="next(1)" id="pre" class="next">❯</button>
+    <button class="prev">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="pre" class="next">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
     <button id="stop">Stop</button>
 
-    <div id="brand_Container">
-      <div class="container">
-        <div class="header">
-          <h1 class="text-muted">A Basic Slider</h1>
-        </div>
+    <div id="brand_Container"></div>
+    <div id="speical_offers">
+      <div id="Spcial_offers"><h2>Special Offers</h2></div>
+      <div id="you_brand">
+        <div id="nxt_button"></div>
+        <div id="jd"></div>
+        <div id="prev_button"></div>
+      </div>
 
-        <div id="slider">
-          <ul class="slides">
-            <li class="slide slide1"><p>slide1</p></li>
-            <li class="slide slide2"><p>slide2</p></li>
-            <li class="slide slide3"><p>slide3</p></li>
-            <li class="slide slide4"><p>slide4</p></li>
-            <li class="slide slide5"><p>slide5</p></li>
-            <li class="slide slide1"><p>slide1</p></li>
-          </ul>
+      <div id="Sbtn"></div>
+      <div id="ViewMore">
+        <button>
+          <a href="iwomenAll.html"><h3>View More</h3></a>
+        </button>
+      </div>
+    </div>
+
+    <div id="trending">
+      <h2>Trending Now</h2>
+      <div id="trendingBody">
+        <div class="arrow">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="trending_items">
+          <img
+            class="lld"
+            src="https://cdn.modesens.com/media/126646784"
+            alt=""
+          />
+          <h4>ETRO</h4>
+          <div id="price">
+            <p id="red">$465 (38% OFF)</p>
+            <p id="black">-$1380</p>
+          </div>
+          <p>Compare 19 stores</p>
+        </div>
+        <div class="trending_items">
+          <img
+            class="lld"
+            src="http://res.cloudinary.com/djtnxo4ow/image/private/s--6x6uTaIl--/v1657090828/image1/image1/at1mlms36qshcjsr1v9j.jpg?date=2022-07-06"
+            alt=""
+          />
+          <h4>MM6 MAISON MARGIELA</h4>
+          <div id="price">
+            <p id="red">$258 (50% OFF)</p>
+            <p id="black">-$675</p>
+          </div>
+          <p>Compere 10 Store</p>
+        </div>
+        <div class="trending_items">
+          <img
+            class="lld"
+            src="https://cdn.modesens.com/availability/55744288?w=400"
+            alt=""
+          />
+          <h4>DISEL</h4>
+          <div id="price">
+            <p id="red">$253 (50% OFF)</p>
+            <p id="black">-$595</p>
+          </div>
+          <p>Compere 16 Stores</p>
+        </div>
+        <div class="trending_items">
+          <img
+            class="lld"
+            src="https://cdn.modesens.com/product/42760262?w=400"
+            alt=""
+          />
+          <h4>JW Wallet</h4>
+          <p>Chain-embellished Lather Slides in</p>
+          <div id="price">
+            <p id="red">$253 (50% OFF)</p>
+            <p id="black">-$595</p>
+          </div>
+          <p>Compere 12 stores</p>
+        </div>
+        <div class="arrow2">
+          <i class="fa-solid fa-chevron-right"></i>
         </div>
       </div>
     </div>
+    <div id="recent">
+      <div><h2>Recently Viewed</h2></div>
+      <div id="recent_Search">
+        <div class="recentBtn" id="recentBtnPre">
+          <i style="margin-top: 150px" class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div id="recent_append"></div>
+        <div class="recentBtn" id="recentBtnNxt">
+          <i
+            style="margin-left: 110px; margin-top: 150px"
+            class="fa-solid fa-chevron-right"
+          ></i>
+        </div>
+      </div>
+      <div id="View">
+        <button id="ViewBtn">
+          <a href="mensAll.html"><h4>View More</h4></a>
+        </button>
+      </div>
+    </div>
+
+    <div id="community"></div>
+
+    <footer id="footer"></footer>
+
+    <script type="module" src="./src/scripts/index.js"></script>
   </body>
 </html>
-
-<script src="./src/scripts/women.js"></script>

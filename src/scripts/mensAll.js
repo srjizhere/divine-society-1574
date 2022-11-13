@@ -5,7 +5,6 @@ import navbar from "../components/navbar.js";
 
 import { srj_footer } from "../components/footer.js";
 
-
 let nav = document.getElementById("navbar")
 nav.innerHTML = navbar()
 
@@ -16,7 +15,7 @@ document.getElementById("footer").innerHTML = srj_footer()
 let api = "https://modesens-data3.onrender.com/api/product"
 let getData = async (page, limit) => {
 
-    let res = await fetch(`${api}?category=beauty&_page=${page}`)
+    let res = await fetch(`${api}?category=mens&_page=${page}`)
     res = await res.json()
 
     renderDom(res)
@@ -121,7 +120,7 @@ let ss = async (page) => {
     value = value.split(" ")
     let cat = value[0]
     let order = value[1]
-    let res = await fetch(`${api}?category=beauty&_sort=${cat}&_order=${order}&_page=${page}&_limit=40`)
+    let res = await fetch(`${api}?category=mens&_sort=${cat}&_order=${order}&_page=${page}&_limit=40`)
     res = await res.json()
     console.log(res);
     renderDom(res)
@@ -150,8 +149,6 @@ backward.onclick = () => {
 
 }
 
-
-
 let show = (page) => {
     let btn = document.getElementById("button")
     let btn1 = document.createElement("div")
@@ -161,34 +158,26 @@ let show = (page) => {
     let start = 1
 
 
-    console.log(start);
-
     if (page > 3) {
         start = page - 2
-
     }
-
-    console.log(start);
-
 
     for (let i = start; i < start + 5; i++) {
 
         let b = document.createElement("button")
 
         b.innerText = i
-        b.onclick = () => {
-            getData(i - 1)
-            b.style.textDecoration = "underline"
-
-        }
-
         b.style.border = "none"
         b.style.backgroundColor = "white"
         b.setAttribute("class", "b")
         btn1.append(b)
         btn.append(backward, btn1, forward)
 
+        b.onclick = () => {
+            getData(i - 1)
 
+
+        }
 
     }
 
@@ -199,9 +188,6 @@ let show = (page) => {
 
 
 show(1)
-
-
-
 
 
 document.getElementById("two").style.cursor = "pointer"
@@ -252,6 +238,8 @@ document.getElementById("four").addEventListener("click", function () {
 
 
 })
+
+
 
 
 
@@ -436,5 +424,12 @@ let gotoCart = document.getElementById("gotoCart")
 gotoCart.onclick = () => {
     window.location.href = "./cart.html"
 }
+
+
+
+
+
+
+
 
 

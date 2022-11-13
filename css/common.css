@@ -1,0 +1,239 @@
+
+#cont {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+#cont img {
+  width: 90%;
+  height: 500px;
+  margin: auto;
+  align-items: center;
+  margin-left: 5%;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  border: none;
+}
+#stop {
+  display: none;
+}
+.prev img {
+  height: 25px;
+  width: 40px;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.numbertext {
+  color: greenyellow;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  margin-left: 70px;
+}
+#brand_Container {
+  width: 99%;
+  height: 400px;
+  border: 0px solid red;
+}
+
+#brand_Container {
+  text-align: center;
+}
+.brandLogo img {
+  width: 144px;
+}
+.brandLogo {
+  margin: auto;
+  width: 90%;
+  height: 248px;
+  display: grid;
+  border: 0px solid black;
+  grid-template-columns: repeat(6, 1fr);
+}
+.sameNextt {
+  width: 40px;
+  border: none;
+}
+#brand_prev {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 800px;
+}
+#brand_next {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 800px;
+}
+#jd {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+#speical_offers {
+  width: 99%;
+  margin: auto;
+  height: 800px;
+  border: 0px solid blueviolet;
+  display: block;
+  align-items: center;
+}
+#Spcial_offers {
+  text-align: center;
+}
+#jd {
+  width: 900px;
+  margin: auto;
+  justify-content: space-between;
+}
+.banner {
+  width: 250px;
+  height: auto;
+}
+#ViewMore {
+  border: 0px solid salmon;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-left: 42.5%;
+  /* padding: 41px; */
+  padding-top: 3%;
+}
+#ViewMore button:hover {
+  background-color: black;
+  color: white;
+}
+#trending {
+  text-align: center;
+  margin-top: 20px;
+}
+#trending h2 {
+  margin-left: 63px;
+}
+.but {
+  height: 45px;
+  width: 110px;
+  font-weight: bold;
+}
+.but:hover {
+  background-color: black;
+  color: white;
+}
+.but #trending {
+  width: 90%;
+  margin: auto;
+}
+#trendingBody {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.trending_items {
+  width: 275;
+  height: 411px;
+  cursor: pointer;
+}
+.arrow {
+  width: 50px;
+  height: 50px;
+  margin-right: 150px;
+  margin-top: 150px;
+  left: 0;
+}
+.arrow2 {
+  width: 50px;
+  height: 50px;
+  right: 0;
+  margin-left: 150px;
+  margin-top: 150px;
+}
+
+.lld {
+  width: 240px;
+  height: 265px;
+}
+#you_brand {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#nxt_button {
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+#prev_button {
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+#recent div {
+  text-align: center;
+}
+#recent_Search {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#recent_append {
+  width: 900px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.recentBtn {
+  width: 50px;
+}
+.reduce {
+  height: 25px;
+  width: 25px;
+}
+.barndtag {
+  margin-top: 50px;
+}
+#marginH2 {
+  margin-top: 50px;
+}
+.xxx {
+  width: 250px;
+}
+.fa-solid {
+  font-size: 32px;
+  line-height: 80px;
+}
+#View {
+  width: 100%;
+  height: 63px;
+}
+#ViewBtn {
+  width: 124px;
+  height: 63px;
+}
+#ViewBtn:hover {
+  background-color: black;
+  color: white;
+}
+a {
+  text-decoration-color: black;
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+}

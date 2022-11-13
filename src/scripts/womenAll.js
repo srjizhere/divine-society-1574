@@ -1,6 +1,5 @@
 /*GET /posts?_page=7
 GET /posts?_page=7&_limit=20 */
-
 import navbar from "../components/navbar.js";
 
 import { srj_footer } from "../components/footer.js";
@@ -16,12 +15,12 @@ document.getElementById("footer").innerHTML = srj_footer()
 let api = "https://modesens-data3.onrender.com/api/product"
 let getData = async (page, limit) => {
 
-    let res = await fetch(`${api}?category=beauty&_page=${page}`)
+    let res = await fetch(`${api}?category=womens&_page=${page}`)
     res = await res.json()
 
     renderDom(res)
     show(page)
-    console.log(res.length);
+
 }
 getData(1)
 let cont = document.getElementById("Product_section")
@@ -121,7 +120,8 @@ let ss = async (page) => {
     value = value.split(" ")
     let cat = value[0]
     let order = value[1]
-    let res = await fetch(`${api}?category=beauty&_sort=${cat}&_order=${order}&_page=${page}&_limit=40`)
+
+    let res = await fetch(`${api}?category=womens&_sort=${cat}&_order=${order}&_page=${page}&_limit=40`)
     res = await res.json()
     console.log(res);
     renderDom(res)
@@ -161,26 +161,15 @@ let show = (page) => {
     let start = 1
 
 
-    console.log(start);
-
     if (page > 3) {
         start = page - 2
-
     }
-
-    console.log(start);
-
 
     for (let i = start; i < start + 5; i++) {
 
         let b = document.createElement("button")
 
         b.innerText = i
-        b.onclick = () => {
-            getData(i - 1)
-            b.style.textDecoration = "underline"
-
-        }
 
         b.style.border = "none"
         b.style.backgroundColor = "white"
@@ -188,7 +177,11 @@ let show = (page) => {
         btn1.append(b)
         btn.append(backward, btn1, forward)
 
+        b.onclick = () => {
+            getData(i)
 
+
+        }
 
     }
 
@@ -199,9 +192,6 @@ let show = (page) => {
 
 
 show(1)
-
-
-
 
 
 document.getElementById("two").style.cursor = "pointer"
@@ -252,8 +242,6 @@ document.getElementById("four").addEventListener("click", function () {
 
 
 })
-
-
 
 
 
@@ -436,5 +424,12 @@ let gotoCart = document.getElementById("gotoCart")
 gotoCart.onclick = () => {
     window.location.href = "./cart.html"
 }
+
+
+
+
+
+
+
 
 
