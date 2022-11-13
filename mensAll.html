@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <title>Document</title>
+  </head>
+  <style>
+    #UpperLine {
+      display: flex;
+      border: 0px solid salmon;
+      width: auto;
+      height: 140px;
+    }
+    #blank {
+      width: 400px;
+    }
+    #first {
+      font-size: 1.71rem;
+      line-height: 40px;
+      font-family: "SuisseIntl";
+    }
+    #second {
+      font-size: 17.1px;
+    }
+    #ss {
+      width: 100px;
+      margin-left: 70px;
+      height: auto;
+    }
+    option {
+      margin-top: 20px;
+      height: 50px;
+      padding-top: 50px;
+    }
+    #nav {
+      display: flex;
+    }
+    #navFilterSection {
+      width: 261px;
+    }
+    #paginationsection {
+      width: 500px;
+      height: 50ox;
+      border: 0px solid black;
+      margin-left: 100px;
+    }
+    #navPageSection {
+      display: flex;
+      width: auto;
+    }
+    #split {
+      margin-top: 0px;
+      width: 150px;
+      margin-left: 20px;
+    }
+    #split img {
+      width: 30.33;
+      height: 30px;
+      margin-left: 12px;
+    }
+    #mainBox {
+      display: flex;
+    }
+    #FilterSection {
+      width: 241px;
+      border: 0px solid blue;
+      height: auto;
+      margin-left: 30px;
+    }
+    #Product_section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 45px;
+      margin: auto;
+    }
+    .imgDiv {
+      position: relative;
+    }
+    .boxDiv {
+      height: 50px;
+      width: 100%;
+      text-align: center;
+      font-size: large;
+      display: none;
+      align-items: center;
+    }
+    .hps {
+      width: auto;
+      height: auto;
+      position: relative;
+      text-align: center;
+      justify-content: space-between;
+    }
+    #search_section {
+      width: 280px;
+      display: flex;
+      cursor: pointer;
+      justify-content: space-between;
+      margin-left: 10px;
+      font-weight: 200;
+      font-size: large;
+    }
+    #reset {
+      width: 207px;
+      display: flex;
+      cursor: pointer;
+      justify-content: space-between;
+      margin-left: 10px;
+      font-weight: 200;
+      font-size: 16px;
+    }
+    .sss {
+      font-size: larger;
+      width: 300px;
+      height: 40px;
+      border: none;
+    }
+    #SAVE {
+      width: 83%;
+      height: 37px;
+      font-size: larger;
+    }
+    .Share {
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-transform: capitalize !important;
+      font-size: 0.85rem;
+    }
+    .ssss {
+      font-size: larger;
+      font-weight: bolder;
+      width: 100%;
+      height: 40px;
+      border: none;
+    }
+    .product_img {
+      width: 189px;
+      height: 274px;
+    }
+    #button {
+      margin: auto;
+      display: flex;
+    }
+    .b {
+      width: 25px;
+      font-size: large;
+    }
+    #btn1 {
+      width: auto;
+
+      height: auto;
+    }
+    #backward {
+      margin-left: 68%;
+      border: none;
+      background-color: white;
+    }
+    #button button {
+      border: none;
+      background-color: white;
+    }
+    #button button:hover {
+      color: red;
+    }
+    #btn1:hover {
+      text-decoration: underline;
+      color: red;
+    }
+    .b:hover {
+      text-decoration: underline;
+      color: red;
+    }
+    #mod {
+      font-size: small;
+      margin-left: 40px;
+    }
+    #search_section p {
+      font-size: 15px;
+    }
+   
+  </style>
+  <body>
+    <div id="navbar"></div>
+    <div id="UpperLine">
+      <div id="blank"></div>
+      <div id="Line">
+        <div>
+          <h1 id="first">Women's Fashion & Designer Products</h1>
+        </div>
+        <div>
+          <p id="second">
+            Women's Fashion & Designer Products Shop women's fashion with price
+            comparison across 500+ . Discover the latest designer fashion for
+            women at ModeSens.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="nav">
+      <div id="navFilterSection"><p id="mod">MODESENS / SHOP / MENS</p></div>
+      <div id="navPageSection">
+        <div id="paginationsection">
+          <div id="button"></div>
+        </div>
+        <div id="split">
+          <img
+            id="four"
+            src="https://cdn.modesens.com/static/img/20210908column4_active.svg"
+            alt=""
+          />
+          <img
+            id="three"
+            src="https://cdn.modesens.com/static/img/20210908column3.svg"
+            alt=""
+          />
+          <img
+            id="two"
+            src="https://cdn.modesens.com/static/img/20210908column2.svg"
+            alt=""
+          />
+        </div>
+        <div id="selectSec">
+          <select name="" id="ss">
+            <option value="discount/asc">Best Seller</option>
+            <option value="id desc">New Arrivals</option>
+            <option value="id asc">Most Liked</option>
+            <option value="price desc">Highest Price</option>
+            <option value="price asc">Lowest Price</option>
+            <option value="createdAt asc">New Sale</option>
+            <option value="">Largest Discount Amount</option>
+            <option value="">Largest Discount Parecentage</option>
+            <option value=""></option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div id="mainBox">
+      <div id="FilterSection">
+        <div id="search_section">
+          <p>10,000+ITEMS</p>
+          <div>
+            <img
+              style="height: 26px; width: 44px; margin-right: 72px"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWXI_JyOVRGL5fOKjn9qMUF3pWkgFcfDm1oQ&usqp=CAU"
+              alt=""
+            />
+          </div>
+        </div>
+        <div id="reset">
+          <p>Filter By:</p>
+          <p>Reset</p>
+        </div>
+        <div id="gender">
+          <select name="" class="sss">
+            <option value="">Gender: Women</option>
+            <option value="">Women</option>
+            <option value="">Men</option>
+            <option value="">Kids</option>
+          </select>
+          <select name="" class="sss">
+            <option value="">Condition: New</option>
+            <option value="">All</option>
+            <option value="">New</option>
+            <option value="">Pre-Owned</option>
+          </select>
+          <select name="" class="sss">
+            <option value="Categoty">Categoty:All</option>
+            <option value="">Clothing</option>
+            <option value="">Shoes</option>
+            <option value="">Bags</option>
+            <option value="">Accessories</option>
+            <option value="">Home</option>
+          </select>
+        </div>
+        <button id="SAVE" style="margin-top: 10px">SAVE MY SEARCH</button>
+        <div class="Share">Share My Search</div>
+        <div class="Share">My Saved Search</div>
+        <select name="" id="category" class="ssss">
+          <option value="">Category</option>
+          <option value="beauty">Beauty</option>
+          <option value="womens">Women</option>
+          <option value="mens">Mens</option>
+          <option value="">Bags</option>
+          <option value="">Home</option>
+        </select>
+        <select name="" class="ssss">
+          <option value="">DESIGNER</option>
+        </select>
+        <select name="" class="ssss">
+          <option value="">COLOR</option>
+        </select>
+        <select name="" class="ssss">
+          <option value="">PRICE RANGE</option>
+        </select>
+        <select name="" class="ssss">
+          <option value="">ON SALE</option>
+        </select>
+        <select name="" class="ssss">
+          <option value="">STORE</option>
+        </select>
+        <select name="" class="ssss">
+          <option value="">KEYWORD</option>
+        </select>
+      </div>
+      <div id="Product_section"></div>
+    </div>
+    <footer id="footer"></footer>
+  </body>
+</html>
+<script type="module" src="./src/scripts/mensAll.js"></script>

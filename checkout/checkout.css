@@ -1,0 +1,181 @@
+.topContainer{
+    background-image: url(https://modesens.com/banner/13853/getimg/?img=%2Fbanner%2F20221101-modesens-knittedvest-1140x400-F_1667273998.jpg);
+    height:35vh;
+    background-position:top; /* Center the image */
+    background-size:cover; /* Resize the background image to cover the entire container */
+
+
+
+}
+.logo{
+    width: 80%;
+    margin: auto;  
+    padding-top: 70px;  
+}
+.logo img{
+    width: 270px;
+    padding-right:150px;
+    margin-right: 55px;
+}
+
+.midSection{
+    width: 80%;
+    margin: auto;
+    display: flex;
+
+}
+.midSection>div{
+    width: 50%;
+ 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.payment{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form{
+    border: 1px solid rgb(155, 154, 154);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+.form>div{
+    width: 90%;
+    border: 1px solid rgb(155, 154, 154);
+    padding: 30px;
+}
+
+.contactDetails{
+    margin-top: 60px;
+}
+.contactDetails>p{
+    margin-bottom: 13px;
+}
+
+.form input{
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid gainsboro;
+}
+
+.mainpayment{
+    width: 60%;
+    margin: auto;
+    
+    display: flex;
+    /* justify-content: space-between; */
+}
+.mainpayment button{
+    width: 170px;
+    height: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 8px;
+    border: 1px solid rgb(155, 154, 154);
+    border-radius: 10px;
+}
+
+.mainpayment :first-child{
+    background-color: #475D4B;
+    color: white;
+}
+
+.mainpayment :last-child{
+    background-color: #465D4B;
+    color: white;
+}
+.mainpayment button:hover{
+    cursor: pointer;
+    background-color:#1b2e20;
+    transition: background-color 0.2s;
+ 
+}
+.payment a{
+    text-decoration: dashed;
+    color: #475D4B;
+}
+
+
+.cartData{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.saveddata{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.saveddata>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.saveddata>div>img{
+    height: 60px;
+}
+.saveddata>div>img+div{
+    width: 300px;
+}
+
+.coupon input {
+    height: 35px;
+    width: 70%;
+}
+.coupon button{
+    height: 38px;
+    width: 100px;
+    background-color:#475D4B;
+    border: none;
+    border-radius: 10px;
+    color: white;
+   
+    font-weight: 600;
+    font-size: 17px;
+}
+.coupon button:hover{
+    cursor: pointer;
+    background-color:#1b2e20;
+    transition: background-color 0.2s;
+    
+}
+
+.amtDetails>div{
+    display: flex ;
+    justify-content: space-between;
+}
+.lastTotal{
+    display: flex;
+    justify-content: space-between;
+
+}
+.two{
+    font-weight: bold;
+    font-size:x-large;
+    display: flex;
+    flex-direction: column;
+}
+.netamt2{
+    font-weight:500;
+    font-size: 26px;
+}
+.contactDetails>p{
+    font-weight: bolder;
+    font-size: large;
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+    padding: 5px;
+
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/a634ccc9aa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <style>
+      #cont {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        position: relative;
+      }
+
+      #cont img {
+        width: 90%;
+        height: 500px;
+        margin: auto;
+        align-items: center;
+        margin-left: 5%;
+      }
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        border: none;
+      }
+      #stop {
+        display: none;
+      }
+      .prev img {
+        height: 25px;
+        width: 40px;
+      }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .numbertext {
+        color: greenyellow;
+        font-size: 20px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        margin-left: 70px;
+      }
+      #brand_Container {
+        width: 99%;
+        height: 400px;
+        border: 0px solid red;
+      }
+
+      #brand_Container {
+        text-align: center;
+      }
+      .brandLogo img {
+        width: 144px;
+      }
+      .brandLogo {
+        margin: auto;
+        width: 90%;
+        height: 248px;
+        display: grid;
+        border: 0px solid black;
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .sameNextt {
+        width: 40px;
+        border: none;
+      }
+      #brand_prev {
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 700px;
+      }
+      #brand_next {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 700px;
+      }
+      #jd {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+      }
+      #speical_offers {
+        width: 99%;
+        margin: auto;
+        height: 800px;
+        border: 0px solid blueviolet;
+        display: block;
+        align-items: center;
+      }
+      #Spcial_offers {
+        text-align: center;
+      }
+      #jd {
+        width: 900px;
+        margin: auto;
+        justify-content: space-between;
+      }
+      .banner {
+        width: 250px;
+        height: auto;
+      }
+      #ViewMore {
+        border: 0px solid salmon;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-left: 42.5%;
+        /* padding: 41px; */
+        padding-top: 3%;
+      }
+      #ViewMore button:hover {
+        background-color: black;
+        color: white;
+      }
+      #trending {
+        text-align: center;
+        margin-top: 20px;
+      }
+      #trending h2 {
+        margin-left: 63px;
+      }
+      .but {
+        height: 45px;
+        width: 110px;
+        font-weight: bold;
+      }
+      .but:hover {
+        background-color: black;
+        color: white;
+      }
+      .but #trending {
+        width: 90%;
+        margin: auto;
+      }
+      #trendingBody {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .trending_items {
+        width: 275;
+        height: 411px;
+        cursor: pointer;
+      }
+      .arrow {
+        width: 50px;
+        height: 50px;
+        margin-right: 150px;
+        margin-top: 150px;
+        left: 0;
+      }
+      .arrow2 {
+        width: 50px;
+        height: 50px;
+        right: 0;
+        margin-left: 150px;
+        margin-top: 150px;
+      }
+
+      .lld {
+        width: 240px;
+        height: 265px;
+      }
+      #you_brand {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      #nxt_button {
+        height: 50px;
+        width: 50px;
+        margin: auto;
+      }
+      #prev_button {
+        height: 50px;
+        width: 50px;
+        margin: auto;
+      }
+      #recent div {
+        text-align: center;
+      }
+      #recent_Search {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      #recent_append {
+        width: 900px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .recentBtn {
+        width: 50px;
+      }
+      .reduce {
+        height: 25px;
+        width: 25px;
+      }
+      .barndtag {
+        margin-top: 50px;
+      }
+      #marginH2 {
+        margin-top: 50px;
+      }
+      .xxx {
+        width: 250px;
+      }
+      .fa-solid {
+        font-size: 32px;
+        line-height: 80px;
+      }
+      #View {
+        width: 100%;
+        height: 63px;
+      }
+      #ViewBtn {
+        width: 124px;
+        height: 63px;
+      }
+      #ViewBtn:hover {
+        background-color: black;
+        color: white;
+      }
+      a {
+        text-decoration-color: black;
+      }
+      a:hover {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <div id="popUpLog"></div>
+    <div id="container"></div>
+    <div id="cont"></div>
+
+    <button class="prev">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="pre" class="next">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    <button id="stop">Stop</button>
+
+    <div id="brand_Container"></div>
+    <div id="speical_offers">
+      <div id="Spcial_offers"><h2>Special Offers</h2></div>
+      <div id="you_brand">
+        <div id="nxt_button"></div>
+        <div id="jd"></div>
+        <div id="prev_button"></div>
+      </div>
+
+      <div id="Sbtn"></div>
+      <div id="ViewMore">
+        <button>
+          <a href="iwomenAll.html"><h3>View More</h3></a>
+        </button>
+      </div>
+    </div>
+
+    <div id="trending">
+      <h2>Trending Now</h2>
+      <div id="trendingBody">
+        <div class="arrow">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="trending_items">
+          <img
+            class="lld"
+            src="https://cdn.modesens.com/media/126646784"
+            alt=""
+          />
+          <h4>ETRO</h4>
+          <div id="price">
+            <p id="red">$465 (38% OFF)</p>
+            <p id="black">-$1380</p>
+          </div>
+          <p>Compare 19 stores</p>
+        </div>
+        <div class="trending_items">
+          <img
+            class="lld"
+            src="http://res.cloudinary.com/djtnxo4ow/image/private/s--6x6uTaIl--/v1657090828/image1/image1/at1mlms36qshcjsr1v9j.jpg?date=2022-07-06"
+            alt=""
+          />
+          <h4>MM6 MAISON MARGIELA</h4>
+          <div id="price">
+            <p id="red">$258 (50% OFF)</p>
+            <p id="black">-$675</p>
+          </div>
+          <p>Compere 10 Store</p>
+        </div>
+        <div class="trending_items">
+          <img
+            class="lld"
+            src="https://cdn.modesens.com/availability/55744288?w=400"
+            alt=""
+          />
+          <h4>DISEL</h4>
+          <div id="price">
+            <p id="red">$253 (50% OFF)</p>
+            <p id="black">-$595</p>
+          </div>
+          <p>Compere 16 Stores</p>
+        </div>
+        <div class="trending_items">
+          <img
+            class="lld"
+            src="https://cdn.modesens.com/product/42760262?w=400"
+            alt=""
+          />
+          <h4>JW Wallet</h4>
+          <p>Chain-embellished Lather Slides in</p>
+          <div id="price">
+            <p id="red">$253 (50% OFF)</p>
+            <p id="black">-$595</p>
+          </div>
+          <p>Compere 12 stores</p>
+        </div>
+        <div class="arrow2">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+    <div id="recent">
+      <div><h2>Recently Viewed</h2></div>
+      <div id="recent_Search">
+        <div class="recentBtn" id="recentBtnPre">
+          <i style="margin-top: 150px" class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div id="recent_append"></div>
+        <div class="recentBtn" id="recentBtnNxt">
+          <i
+            style="margin-left: 110px; margin-top: 150px"
+            class="fa-solid fa-chevron-right"
+          ></i>
+        </div>
+      </div>
+      <div id="View">
+        <button id="ViewBtn">
+          <a href="mensAll.html"><h4>View More</h4></a>
+        </button>
+      </div>
+    </div>
+
+    <div id="community"></div>
+
+    <footer id="footer"></footer>
+  </body>
+</html>
+
+<script type="module" src="./src/scripts/men.js"></script>
