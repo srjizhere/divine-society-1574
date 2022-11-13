@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/a634ccc9aa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <title>Document</title>
+
+    <style>
+      #allDetails {
+        width: 97%;
+        height: auto;
+        border: 0px solid darkblue;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+      }
+      #imgSection {
+        width: 48%;
+        border: 0px solid darkgreen;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      #Details_Section {
+        width: 48%;
+        border: 0px solid darkred;
+        height: 300px;
+      }
+      #toolBox {
+        width: 10%;
+        border: 0px solid darkred;
+        height: 100%;
+      }
+      #imgBox {
+        width: 85%;
+        border: 0px solid darkgreen;
+        height: 100%;
+      }
+      #showMonth {
+        display: flex;
+        justify-content: space-between;
+      }
+      #size {
+        height: 50px;
+        width: 50px;
+        content: f004;
+      }
+      .fa-solid {
+        font-size: 32px;
+        line-height: 80px;
+      }
+      a {
+        position: relative;
+      }
+      a::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: -90;
+        left: 0;
+
+        position: absolute;
+        transition: 0.5s;
+        color: red;
+      }
+      a:hover::after {
+        top: 0px;
+      }
+      .fa-solid :hover {
+        color: red;
+      }
+      .fa-regular {
+        font-size: 32px;
+        line-height: 80px;
+      }
+      #brand {
+        color: #1c1c1c;
+        text-decoration: none;
+        display: inline-block !important;
+        margin: 15px 0 15px 0;
+        font-weight: 700 !important;
+        background-color: transparent;
+        outline: 0;
+        background-color: transparent;
+        font-size: 20px;
+      }
+      #title {
+        font-size: 20px;
+        font-weight: 300 !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        line-height: 20px;
+        margin: 0 0 15px 0;
+        letter-spacing: 0.5px;
+      }
+      #priceDiv {
+        font-size: 20px;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        margin: 0 0 15px 0;
+      }
+      #point {
+        margin: 15px 0 15px 0;
+      }
+      #textPre h2 {
+        margin: 15px 0 15px 0;
+      }
+      #checkSection {
+        width: 98%;
+        height: auto;
+        border: 0px solid darkblue;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+      }
+
+      #textPre {
+        width: 48%;
+        border: 0px solid darkgreen;
+        height: 100%;
+
+        justify-content: space-between;
+      }
+      #bag {
+        width: 48%;
+        border: 0px solid darkgreen;
+        height: 100%;
+
+        justify-content: space-between;
+      }
+      #bag button:first-child {
+        width: 254px;
+        height: 41px;
+        font-size: x-large;
+      }
+      select {
+        border: none;
+        width: 60px;
+        height: 36px;
+        font-size: 23px;
+      }
+      #addBag {
+        width: 254px;
+        height: 41px;
+        font-size: x-large;
+        background-color: #1c1c1c;
+        color: aliceblue;
+      }
+      #img {
+        width: 245px;
+        height: 323px;
+        margin-left: 100px;
+      }
+      #colo {
+        color: #8e8e8e;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div id="Mainbox">
+      <div id="productText"></div>
+      <div id="Details">
+        <div id="allDetails">
+          <div id="imgSection">
+            <div id="imgBox">
+              <div id="img"></div>
+              <div id="showMonth"></div>
+            </div>
+            <div id="toolBox">
+              <div id="heart">
+                <a href=""> <i class="fa-solid fa-heart"></i></a>
+              </div>
+              <div id="share">
+                <i class="fa-regular fa-share-from-square"></i>
+              </div>
+              <div id="forward">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+          <div id="Details_Section"></div>
+        </div>
+
+        <div id="checkSection">
+          <div id="textPre">
+            <h2>Shiop With ModeSens Concierge</h2>
+
+            <p id="colo">
+              ModeSens Concierge helps you shop 500+ stores in one place. A
+              premium <br />
+              benefit exclusively reserved for Silver and above members.
+              <a href="">Learn More</a>
+            </p>
+          </div>
+          <div id="bag">
+            <button id="selectSize">
+              Quantity
+              <select name="" id="">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+              </select>
+            </button>
+            <button id="addBag">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
+<script type="module" src="./src/scripts/product.js"></script>
