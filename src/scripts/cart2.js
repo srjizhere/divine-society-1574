@@ -71,7 +71,6 @@ function rendercartimgsrj(dataa){
 
 
 
-
             container.append(brand,imgsrjcont,title,price,rbtn)
             datacontainersrj.append(container)
             
