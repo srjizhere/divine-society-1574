@@ -60,7 +60,16 @@ function rendercartimgsrj(dataa) {
                 deletefromcart(e.id)
             }
 
+<<<<<<< HEAD
             container.append(brand, imgsrjcont, title, price, rbtn)
+=======
+
+
+
+
+
+            container.append(brand,imgsrjcont,title,price,rbtn)
+>>>>>>> 37c0ccdc0d2d35f2c4cb31a99c6f85356d991e2b
             datacontainersrj.append(container)
 
         });
